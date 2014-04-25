@@ -9,4 +9,4 @@ You can run the app with maven:
 
 ```
 mvn clean install tomcat7:run
-'''
+```
