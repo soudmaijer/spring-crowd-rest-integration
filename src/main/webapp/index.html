@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="sample">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+</head>
+<body>
+<div class="container">
+    <div ng-controller="SampleController">
+        <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+        <form role="form">
+            <div class="form-group">
+                <label for="username" class="col-lg-2 control-label">Username</label>
+
+                <div class="col-lg-10">
+                    <input name="username" required id="username" type="text" class="form-control" placeholder="Username" ng-model="loginForm.username">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password" class="col-lg-2 control-label">Password</label>
+
+                <div class="col-lg-10">
+                    <input name="password" required id="password" type="password" class="form-control" placeholder="Password" ng-model="loginForm.password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-offset-2 col-lg-10">
+                    <button type="submit" class="btn btn-primary" ng-click="login()">Sign in</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="http://code.angularjs.org/1.2.7/angular.js"></script>
+<script src="http://code.angularjs.org/1.2.7/angular-sanitize.js"></script>
+<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js"></script>
+<script src="js/sample.js"></script>
+</body>
+</html>
